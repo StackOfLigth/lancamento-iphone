@@ -1,4 +1,4 @@
-package TrilhaJava;
+package TrilhaJava.modulo.basico;
 
 class HelloWorld
 {

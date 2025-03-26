@@ -1,4 +1,4 @@
-package TrilhaJava;
+package TrilhaJava.modulo.basico;
 public class Metodos {
     public static void main(String[] args) {
         String nome = "Gustavo";
