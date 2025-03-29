@@ -29,5 +29,6 @@ public class EntradaDeDados {
         
 
         System.out.println("Fim");
+        scanner.close();
     }
 }
