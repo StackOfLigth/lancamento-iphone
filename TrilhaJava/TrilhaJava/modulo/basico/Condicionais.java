@@ -14,6 +14,8 @@ public class Condicionais {
         System.out.println("Digite o nome do aluno: ");
         int notaAluno = leitura.nextInt();
 
+        //Com IF-ELSE
+
         if(notaAluno >= 7){
             System.out.printf("%s, está: APROVADO", nomeAluno);
         } else if(notaAluno >= 4 && notaAluno <=6){
@@ -22,7 +24,27 @@ public class Condicionais {
             System.out.printf("%s, está: REPROVADO", nomeAluno);
         }
 
+        
+
+                //Com Ternário
+
+                String notaFinal = (notaAluno == 10) ? "TOP" : "Não Top";
+                System.out.println(notaFinal);
+
+                //Com SWICH-CASE
+
+                switch (notaAluno) {
+                    case 9:
+                        System.out.println("deu certo");
+                        break;
+                
+                    default: System.out.println("não deu certo");
+                        break;
+                }
         leitura.close();
     }
+
+
+
     
 }
