@@ -22,6 +22,7 @@ public class LoopWhile {
 
             mesada = mesada - valorDoce;//atualiza o valor so saldo subtraindo pelo valor aleatorio do doce.
             
+            leitura.close();
         }
         System.out.printf("Saldo Mesada: R$ %.2f \n", mesada);
         System.out.println("Você gastou toda sua mesada '0'");
