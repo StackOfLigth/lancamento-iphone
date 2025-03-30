@@ -1,26 +1,34 @@
 package TrilhaJava.modulo.basico;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class LoopWhile {
     
     public static void main(String[] args) {
-        Double mesada = 50.00;
+
+        Scanner leitura = new Scanner(System.in);//instanciando objeto.
+
+        System.out.println("Digite o valor da Mesada: ");
+        Double mesada = leitura.nextDouble();//Entrada de input.
 
         while (mesada > 0) {
-            Double valorDoce = valorAleatorio();
-            //if (valorDoce > mesada) {
-               // valorDoce = mesada;
-           //}
-            System.out.printf("Doce do valor: R$ %.2f adicionado no carrinho \n", valorDoce);
+            Double valorDoce = valorAleatorio();//Variavel para armazenar valor aleatorio
+            System.out.printf("Você Possui: R$ %.2f \n", mesada);
 
-            mesada = mesada - valorDoce;
+            if (valorDoce > mesada) {//Validação para não utilizar além do saldo referenciado.
+                valorDoce = mesada;
+           }
+            System.out.printf("Doce no de valor: R$ %.2f adicionado no carrinho \n", valorDoce);
+
+            mesada = mesada - valorDoce;//atualiza o valor so saldo subtraindo pelo valor aleatorio do doce.
+            
         }
-        System.out.printf("Mesada: R$ %.2f \n", mesada);
+        System.out.printf("Saldo Mesada: R$ %.2f \n", mesada);
         System.out.println("Você gastou toda sua mesada '0'");
 
     }
     // Metodo que ira trazer um valor aleatório
     private static double valorAleatorio(){
-        return ThreadLocalRandom.current().nextDouble(2, 10);
+        return ThreadLocalRandom.current().nextDouble(2, 12);
     }
 }
