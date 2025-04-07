@@ -15,15 +15,15 @@ public class OpTernario {
 
         leitura.nextLine();
 
-        System.out.println("Pagamento no PIX? Digite Sim ou Não: ");
+        System.out.println("Pagamento no PIX? Digite Sim ou Nao: ");
 
         String pix = leitura.nextLine();
 
         double venda = laranja < 10 ? 2.8 : 2;
-        double desconto = pix.equals("Sim") ? .9 : 1;
+        double desconto = pix.equalsIgnoreCase("Sim") ? .9 : 1;
 
-        double pagamento = laranja *venda * desconto;
-        System.out.printf("Total a pagar: R$ %.2f", pagamento);
+        double pagamento = laranja * venda * desconto;
+        System.out.printf("Total a pagar: R$ %.2f" + System.lineSeparator(), pagamento );
 
         leitura.close();
 
